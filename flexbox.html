@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 150px;
+            border: 2px solid #333;
+            margin: 30px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+
+            /* flex-direction: column; untuk mengatur arah/urutan dari items di dlm container */
+
+            /* flex-wrap: wrap-reverse; menyusun menjadi terbalik*/
+
+            /* justify-content = mengatur jarak antar items */
+            /* justify-content: flex-end; menyusun box menjadi berada di end / right*/
+            /* justify-content: space-evenly; */
+
+            /* align-items mengatur penjajaran items terhadap cross axis / vertikal  */
+            /* align-items: center; */
+            /* align-items: stretch; akan penuh jika tidak ada height nya */
+            /* align-items: baseline; */
+
+            /* align-content: ;  untuk mengatur jarak antar items terhadap cross axis (tapi hanya berfungsi ketika items lebih dari 1 baris)*/
+            /* align-content: space-between; */
+
+        }
+
+        .container div {
+            /* width: 120px;
+            height: 120px; */
+            flex: 1;
+            background-color: lightblue;
+            /* border: 1px solid black; */
+            margin: 2px;
+        }
+
+        /* .container div.satu {
+            order: 4;
+        }
+        .container div.dua {
+            order: 3;
+        }
+        .container div.tizga {
+            order: 2;
+        }
+        .container div.empat {
+            order: 1;
+        } */
+
+        /* .container div.tiga{
+            font-size: 2rem;
+        } */
+        .container div.dua{
+            /* align-self: flex-end; untuk mengatur perilaku penjajaran sebuah item yang spesifik terhadap cross axis (khusus untuk 1 element beda dgn align-content yg 1 baris) */
+            flex: 2;
+        }
+
+        
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+    </div>
+</body>
+
+</html>
